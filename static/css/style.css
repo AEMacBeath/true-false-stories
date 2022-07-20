@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&family=Roboto&display=swap');
+
+body {
+    background-color: black;
+}
+
+header {
+    margin: 0;
+}
+
+/*---------------------------------------- Navbar */
+.navbar {
+    background-color: #fba031;
+}
+
+.navbar-brand {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2rem;
+    color: black;
+    padding: 0;
+}
+
+.navbar-nav {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.25rem;
+    position: absolute;
+    right: 10px;
+}
+
+.nav-link {
+    color: black;
+}
+
+.nav-link:hover, .navbar-brand:hover {
+    color: white;
+}
