@@ -7,6 +7,7 @@ STATUS = ((0, "Draft"), (1, "Published"))
 class Story(models.Model):
     title = models.CharField(max_length=100, unique=True)
     content = models.TextField()
+    excerpt = models.TextField(blank=True)
     featured_image = CloudinaryField('image', default='placeholder')
     status = models.IntegerField(choices=STATUS, default=0)
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='stories')
@@ -23,10 +24,10 @@ class Story(models.Model):
         return self.title
 
     def number_of_tvotes(self):
-        return self.story_tvote.count()
+        return self.tvote.count()
 
     def number_of_fvotes(self):
-        return self.story_fvote.count()
+        return self.fvote.count()
 
 
 class Comment(models.Model):

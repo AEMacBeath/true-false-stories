@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans&family=Roboto&display=swap');
 
 body {
-    background-color: black;
+    background-color: rgb(169, 169, 169);
 }
 
 header {
@@ -33,4 +33,28 @@ header {
 
 .nav-link:hover, .navbar-brand:hover {
     color: white;
+}
+
+/*---------------------------------------- Cover image */
+.cover-img {
+    height: 100vh;
+    min-height: 500px;
+    background-image: url('https://res.cloudinary.com/aemacbeath/image/upload/v1658426728/true-false-quiz_zsivav.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+
+/*---------------------------------------- Story cards */
+.story-card {
+    margin-top: 100px;
+}
+
+/*---------------------------------------- Footer list */
+
+
+/*---------------------------------------- Footer */
+footer {
+    background-color: #fba031;
 }
