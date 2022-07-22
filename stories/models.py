@@ -42,3 +42,16 @@ class Comment(models.Model):
 
     def __str__(self):
         return f'Comment {self.body} by {self.name}'
+
+
+class Headline(models.Model):
+    title = models.CharField(max_length=100, unique=True)
+    content = models.TextField()
+    displayed = models.BooleanField(default=False)
+    created = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ['-created']
+
+    def __str__(self):
+        return self.title

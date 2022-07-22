@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django_summernote.admin import SummernoteModelAdmin
-from .models import Story, Comment
+from .models import Story, Comment, Headline
 
 
 @admin.register(Story)
@@ -22,3 +22,13 @@ class CommentAdmin(admin.ModelAdmin):
 
     def approve_comment(self, request, queryset):
         queryset.update(approved=True)
+
+
+@admin.register(Headline)
+class HeadlineAdmin(admin.ModelAdmin):
+
+    list_display = ('title', 'displayed', 'created')
+    actions = ['display_headline']
+
+    def display_headline(self, request, queryset):
+        queryset.update(displayed=True)
